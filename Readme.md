@@ -21,14 +21,14 @@ How to Run
 
 1. Open Git Bash (or any terminal) and run:
    ```git clone https://github.com/yprithiviraj/SalesAnalyticsAPI.git```
-   cd sales-revenue-api
-1. Open the ```ApplicationDbContextFactory.cs``` file and modify the ```optionsBuilder.UseSqlServer()``` line to point to your local or desired SQL Server connection string:
-1. Example : ```optionsBuilder.UseSqlServer("Server=localhost;Database=SalesRevenueDb;Trusted_Connection=True;TrustServerCertificate=True;");```
+
+2. Open the ```ApplicationDbContextFactory.cs``` file and modify the ```optionsBuilder.UseSqlServer()``` line to point to your local or desired SQL Server connection string:
+   Example : ```optionsBuilder.UseSqlServer("Server=localhost;Database=SalesRevenueDb;Trusted_Connection=True;TrustServerCertificate=True;");```
 
 
-2. Restore dependencies using ```dotnet restore```
-3. Apply migration using ```dotnet ef database update```
-4. Run the application using ```dotnet run```
+3. Change directory using ```cd sales-revenue-api``` and Restore dependencies using ```dotnet restore```
+4. Apply migration using ```dotnet ef database update```
+5. Run the application using ```dotnet run```
 
 Files
 -------
