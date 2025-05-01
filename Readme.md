@@ -19,11 +19,10 @@ Prerequisites
 How to Run
 ------------
 
-1. Clone the repository
-   git bash
-   ```git clone https://github.com/your-repo/sales-revenue-api.git```
+1. Open Git Bash (or any terminal) and run:
+   ```git clone https://github.com/yprithiviraj/SalesAnalyticsAPI.git```
    cd sales-revenue-api
-1. Open the ApplicationDbContextFactory.cs file and modify the optionsBuilder.UseSqlServer() line to point to your local or desired SQL Server connection string:
+1. Open the ```ApplicationDbContextFactory.cs``` file and modify the ```optionsBuilder.UseSqlServer()``` line to point to your local or desired SQL Server connection string:
 1. Example : ```optionsBuilder.UseSqlServer("Server=localhost;Database=SalesRevenueDb;Trusted_Connection=True;TrustServerCertificate=True;");```
 
 
@@ -69,7 +68,7 @@ API Details
 ------------------
 
 | **API Name**                  | **Route**                          | **Method** | **Body (if any)**         | **Sample Response**                                                       | **Description**                                                             |
-|:-----------------------------|:-----------------------------------|:-----------|:-------------------------|:--------------------------------------------------------------------------|:------------------------------------------------------------------------------|
+|:------------------------------|:-----------------------------------|:-----------|:--------------------------|:--------------------------------------------------------------------------|:------------------------------------------------------------------------------|
 | Import CSV                    | `/api/sales/import`                  | `POST`     | `filePath` (optional query param or JSON body if extended) | `"CSV import initiated."`                                                 | Triggers CSV import process. Currently reads from a static file location or scheduled service. |
 | Get Total Revenue             | `/api/analysis/total-revenue`        | `GET`      | `startDate`, `endDate` (query params)                      | `120000.00`                                                               | Fetches total revenue between the provided date range.                     |
 | Get Revenue by Product        | `/api/analysis/revenue-by-product`   | `GET`      | `startDate`, `endDate` (query params)                      | `[{ "productId": 1, "productName": "Item A", "totalRevenue": 50000.00 }]` | Fetches total revenue grouped by product within the specified date range. |
